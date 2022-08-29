@@ -1,5 +1,5 @@
 # CSE360
-Cane for the visually impaired
+# Cane for the visually impaired
 According to the most recent data census provided by the National Eye Institute, the number of
 people with visual impairment in the United States is calculated to double by 2050, which is
 estimated to be more than 8 million people. Despite this drastic increase in blindness, there still
