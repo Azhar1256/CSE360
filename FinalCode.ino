@@ -1,3 +1,6 @@
+// Phone number that receives the location SMS, in international format.
+const char ALERT_PHONE_NUMBER[] = "+8801XXXXXXXXX";
+
 #include "TinyGPS++.h"
 #include <SoftwareSerial.h>
 
@@ -150,7 +153,7 @@ void SendMessage(String message){
   delay(1000);
   Serial.println ("Set SMS Number");
   // Receiver's Mobile Number
-  SIM900A.println("AT+CMGS=\"+8801XXXXXXXXX\"\r"); 
+  SIM900A.print("AT+CMGS=\""); SIM900A.print(ALERT_PHONE_NUMBER); SIM900A.println("\""); 
   delay(1000);
   Serial.println ("Set SMS Content");
   // Messsage content passed in parameter

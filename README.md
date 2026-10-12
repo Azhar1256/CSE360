@@ -21,3 +21,27 @@ A6 GPRS GSM Module will serve as a messenger and notify his location to a family
 through SMS. The HC-SR04 is used to sense obstacles around the blind user, and if an obstacle
 is detected, warning signals in the form of sound through the buzzer are sent out to the user. And
 from this notification, the blind person is alerted and moves along a different route.
+
+## Hardware
+
+| Component | Role |
+|---|---|
+| Arduino Uno | Controller |
+| HC-SR04 ultrasonic sensor | Detects obstacles; the buzzer warns the user |
+| Adafruit AHT20 | Temperature and humidity, warning of hot or wet areas |
+| GY-NEO6MV2 GPS | Tracks the user's location |
+| A6 GPRS/GSM module | Sends the location to a family member by SMS |
+| Buzzer | Audio alerts |
+
+## Files
+
+- `FinalCode.ino`: the complete sketch (sensors, buzzer, GPS and SMS)
+- `GPS.ino`: a standalone GPS test
+- `Cane for the visually impaired.pdf`: the project report
+- `IMG_*.jpg`: photos of the built prototype
+
+## Set up
+
+Install the **TinyGPS++** library in the Arduino IDE. Set `ALERT_PHONE_NUMBER` at the top of `FinalCode.ino` to the number that should receive alerts, then upload to the board.
+
+Built for **CSE360 Computer Interfacing** at BRAC University (2022).
